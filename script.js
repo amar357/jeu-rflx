@@ -128,7 +128,7 @@ function startGame() {
     if (!username) {
 
         result.textContent =
-            "⚠️ Écris ton pseudo avant de jouer.";
+            "⚠️ Écris ton pseudo avant de jouer A NEMI.";
 
         usernameInput.focus();
 
@@ -228,7 +228,7 @@ reactionBox.addEventListener(
 
 
             result.textContent =
-                "❌ Trop tôt !";
+                "❌ SLAQL ASID !";
 
 
             resetGame();
