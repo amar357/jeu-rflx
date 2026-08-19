@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ARENA - Reaction Test</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">⚔ ARENA</div>
+
+    <nav>
+        <a href="#game">Jeu</a>
+        <a href="#leaderboard">🏆 Classement</a>
+    </nav>
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="badge">
+            WELCOME TO THE ARENA
+        </div>
+
+        <h1>
+            Teste tes réflexes ⚡
+        </h1>
+
+        <p>
+            Sois le plus rapide possible.
+        </p>
+
+    </section>
+
+
+    <!-- GAME -->
+
+    <section class="game" id="game">
+
+        <div class="game-top">
+
+            <div>
+                <span class="small-title">
+                    REACTION TEST
+                </span>
+
+                <h2>⚡ Reaction</h2>
+            </div>
+
+            <div class="best-score">
+                <span>Ton meilleur</span>
+                <strong id="best">--</strong>
+            </div>
+
+        </div>
+
+
+        <!-- USERNAME -->
+
+        <div class="username-container">
+
+            <label for="username">
+                Ton pseudo
+            </label>
+
+            <input
+                type="text"
+                id="username"
+                placeholder="Ex : Amar"
+                maxlength="20"
+                autocomplete="off"
+            >
+
+        </div>
+
+
+        <!-- REACTION BOX -->
+
+        <div
+            id="reactionBox"
+            class="reaction-box"
+        >
+
+            <span id="message">
+                Clique sur START
+            </span>
+
+        </div>
+
+
+        <!-- START -->
+
+        <button
+            id="startBtn"
+            class="start-button"
+        >
+            START
+        </button>
+
+
+        <!-- RESULT -->
+
+        <div
+            id="result"
+            class="result"
+        ></div>
+
+    </section>
+
+
+    <!-- LEADERBOARD -->
+
+    <section
+        class="leaderboard"
+        id="leaderboard"
+    >
+
+        <div class="section-title">
+
+            <span>RANKING</span>
+
+            <h2>🏆 Classement</h2>
+
+        </div>
+
+
+        <div id="leaderboardList">
+
+            <div class="loading">
+                Chargement...
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        ⚔ ARENA © 2026
+    </p>
+
+</footer>
+
+
+<!-- SUPABASE -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,576 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #20203a 0%,
+            #0b0b12 45%
+        );
+
+    color: white;
+
+    min-height: 100vh;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+
+    height: 70px;
+
+    padding: 0 7%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-bottom: 1px solid #292936;
+
+    background: rgba(10, 10, 18, 0.8);
+
+    backdrop-filter: blur(10px);
+}
+
+
+.logo {
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+nav {
+
+    display: flex;
+
+    gap: 30px;
+}
+
+
+nav a {
+
+    color: #aaa;
+
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+
+nav a:hover {
+
+    color: white;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    text-align: center;
+
+    padding: 70px 20px 40px;
+}
+
+
+.badge {
+
+    display: inline-block;
+
+    color: #a78bfa;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+}
+
+
+.hero h1 {
+
+    font-size: 48px;
+
+    margin-bottom: 15px;
+}
+
+
+.hero p {
+
+    color: #999;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   GAME
+========================= */
+
+.game {
+
+    background: #13131d;
+
+    border: 1px solid #292936;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+
+.game-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+
+.small-title {
+
+    color: #8b5cf6;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.game h2 {
+
+    margin-top: 5px;
+}
+
+
+.best-score {
+
+    text-align: right;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.best-score span {
+
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+.best-score strong {
+
+    font-size: 22px;
+}
+
+
+/* =========================
+   USERNAME
+========================= */
+
+.username-container {
+
+    margin-bottom: 20px;
+}
+
+
+.username-container label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #aaa;
+
+    font-size: 14px;
+}
+
+
+.username-container input {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    border: 1px solid #30303e;
+
+    outline: none;
+
+    background: #0d0d15;
+
+    color: white;
+
+    font-size: 16px;
+}
+
+
+.username-container input:focus {
+
+    border-color: #7c3aed;
+}
+
+
+.username-container input::placeholder {
+
+    color: #555;
+}
+
+
+/* =========================
+   REACTION BOX
+========================= */
+
+.reaction-box {
+
+    height: 350px;
+
+    border-radius: 15px;
+
+    background: #1d1d29;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    transition:
+        background 0.15s,
+        transform 0.1s;
+}
+
+
+.reaction-box.ready {
+
+    background: #b91c1c;
+}
+
+
+.reaction-box.go {
+
+    background: #16a34a;
+
+    transform: scale(1.01);
+}
+
+
+.reaction-box:active {
+
+    transform: scale(0.99);
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.start-button {
+
+    display: block;
+
+    margin: 20px auto 0;
+
+    padding: 14px 55px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #7c3aed;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.start-button:hover {
+
+    transform: translateY(-2px);
+
+    background: #8b5cf6;
+}
+
+
+.start-button:disabled {
+
+    opacity: 0.5;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* =========================
+   RESULT
+========================= */
+
+.result {
+
+    min-height: 30px;
+
+    margin-top: 20px;
+
+    text-align: center;
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   LEADERBOARD
+========================= */
+
+.leaderboard {
+
+    margin: 60px 0;
+}
+
+
+.section-title {
+
+    margin-bottom: 20px;
+}
+
+
+.section-title span {
+
+    color: #8b5cf6;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    font-weight: bold;
+}
+
+
+.section-title h2 {
+
+    margin-top: 5px;
+}
+
+
+.player {
+
+    background: #13131d;
+
+    border: 1px solid #292936;
+
+    border-radius: 12px;
+
+    padding: 18px 20px;
+
+    margin-bottom: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    transition: 0.2s;
+}
+
+
+.player:hover {
+
+    border-color: #44445a;
+
+    transform: translateX(3px);
+}
+
+
+.player-left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.rank {
+
+    width: 35px;
+
+    font-weight: bold;
+
+    color: #999;
+}
+
+
+.player-name {
+
+    font-weight: bold;
+}
+
+
+.player-score {
+
+    font-weight: bold;
+
+    color: #a78bfa;
+}
+
+
+.loading {
+
+    text-align: center;
+
+    padding: 30px;
+
+    color: #777;
+}
+
+
+.error {
+
+    text-align: center;
+
+    padding: 20px;
+
+    color: #f87171;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 30px;
+
+    color: #555;
+
+    border-top: 1px solid #1f1f2b;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    header {
+
+        padding: 0 5%;
+    }
+
+
+    nav {
+
+        gap: 12px;
+    }
+
+
+    nav a {
+
+        font-size: 13px;
+    }
+
+
+    .hero {
+
+        padding-top: 45px;
+    }
+
+
+    .hero h1 {
+
+        font-size: 35px;
+    }
+
+
+    .game-top {
+
+        align-items: flex-start;
+    }
+
+
+    .reaction-box {
+
+        height: 280px;
+
+        font-size: 22px;
+    }
+
+
+    .player {
+
+        padding: 15px;
+    }
+
+}
